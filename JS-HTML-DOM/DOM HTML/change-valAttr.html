@@ -1,0 +1,22 @@
+<!-- 
+    To change the value of an HTML attribute, use this syntax:
+        document.getElementById(id).attribute = new value
+ -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Changing the Value of an Attribute</title>
+ </head>
+ <body>
+     <img src="smiley.gif" id="image" width="160" height="120">
+     
+     <script>
+         document.getElementById("image").src = "landscape.jpg";
+         <p>The original image was smiley.gif, but the script changed it to landscape.jpg</p>
+     </script>
+ </body>
+ </html>

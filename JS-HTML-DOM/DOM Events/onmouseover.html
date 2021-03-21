@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>On mouse over</title>
+    <link rel="stylesheet" href="onmouseover.css" type="text/css">
+</head>
+<body>
+    <div class="button" onmouseover="mOver(this)" onmouseout="mOut(this)">
+    </div>
+
+    <script>
+        function mOver(obj) {
+            obj.innerHTML = "Thank you"
+        }
+
+        function mOut(obj) {
+            obj.innerHTML = "Mouse Over Me"
+        }
+    </script>
+</body>
+</html>

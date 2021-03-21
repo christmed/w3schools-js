@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="animate-code.css" type="text/css">
+</head>
+<body>
+    <h1>My First JavaScript Animation</h1>
+    <p><button onclick="myMove()">Click me</button></p>
+    <p><button onclick="myMove2()">Click me too!</button></p>
+    <div id="container">
+        <div id="animate"></div>
+        <div id="animate-2"></div>
+    </div>
+
+    <script>
+        let id = null;
+        function myMove() {
+            let elem = document.getElementById("animate");
+            let pos = 0;
+            clearInterval(id);
+            id = setInterval(frame, 5);
+
+            function frame() {
+                if (pos == 350) {
+                    clearInterval(id);
+                } else {
+                    pos ++;
+                    elem.style.top = pos + "px";
+                    elem.style.left = pos + "px";
+                }
+            }
+        }
+        let id2 = null;
+        function myMove2() {
+            let elem2 = document.getElementById("animate-2");
+            let pos2 = 0;
+            clearInterval(id2);
+            id2 = setInterval(frame2, 5);
+
+            function frame2() {
+                if (pos2 == 350) {
+                    clearInterval(id2);
+                } else {
+                    pos2 ++;
+                    elem2.style.top = pos2 + "px";
+                    elem2.style.right = pos2 + "px";
+                }
+            }
+        }
+    </script>
+</body>
+</html>
